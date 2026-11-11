@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use AIPHARMA, please cite the released software version and associated manuscript."
+title: "AIPHARMA: A Provenance- and Evidence-Aware Framework for Reproducible AI-Assisted Molecular Design and Target-Specific Validation"
+version: "0.1.0-rc1"
+authors:
+  - family-names: "Agraz"
+    given-names: "Melih"
+# REVIEW BEFORE PUBLICATION: add all eligible software contributors, confirm authorship,
+# then add the actual public repository URL and Zenodo DOI when available.
+# REVIEW BEFORE PUBLICATION: add date-released only after actual public release.

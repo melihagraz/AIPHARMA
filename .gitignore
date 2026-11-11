@@ -1,0 +1,38 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.secrets/
+credentials.json
+
+# Local experiment outputs
+reports/
+dist_release/
+phase14_eave_baselines/
+logs/
+*.log
+
+# Downloaded archives
+*.zip
+*.tar.gz
+*.7z
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local backups
+*.backup
+*.bak

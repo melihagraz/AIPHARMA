@@ -1,0 +1,15 @@
+AIPHARMA — Evidence-Aware Molecular Design and Validation
+Copyright 2026 Melih Agraz
+
+This copyright notice applies only to original AIPHARMA material for which
+Melih Agraz is the copyright holder or is authorized to grant a license.
+
+The Apache License, Version 2.0, supplied in the repository root LICENSE,
+applies to those original components. It does not relicense third-party code,
+model weights, datasets, binaries, or other material under separate terms.
+
+Third-party components, including REINVENT-derived portions, ADMET-AI,
+AutoDock Vina, Dockstring-derived material, RDKit, and other dependencies,
+remain subject to their respective licenses and attribution requirements.
+Their existing license and NOTICE files must be retained when distributing
+licensed copies. See THIRD_PARTY_NOTICES.md and LICENSE_SCOPE.md.
