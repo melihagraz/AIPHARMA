@@ -1,0 +1,18 @@
+{
+  "experiment": "EGFR-1M17 crystallographic ligand redocking",
+  "pdb_id": "1M17",
+  "ligand": "AQ4",
+  "vina_version": "AutoDock Vina v1.2.5",
+  "seed": 20261109,
+  "exhaustiveness": 16,
+  "cpu": 1,
+  "num_modes": 9,
+  "top_pose_rmsd_angstrom": 1.4022,
+  "top_pose_rmsd_below_2A": true,
+  "original_output_sha256": "16c5cc1cedbbbac61099e93131b769679e768b0deeb0c78575eebbfabc3145cb",
+  "reproduced_output_sha256": "16c5cc1cedbbbac61099e93131b769679e768b0deeb0c78575eebbfabc3145cb",
+  "bitwise_identical": true,
+  "method": "spyrmsd symmetry-corrected, no superposition",
+  "environment": "local WSL2 Ubuntu clean clone r5",
+  "code_commit": "50575940e56200fbb7764a5fb480247c70f02a68"
+}

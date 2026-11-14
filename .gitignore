@@ -36,3 +36,6 @@ Thumbs.db
 # Local backups
 *.backup
 *.bak
+
+# Third-party pretrained model weights
+/Reinvent_App/prior/

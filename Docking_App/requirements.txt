@@ -1,0 +1,6 @@
+rdkit>=2024.3
+meeko>=0.7
+gemmi>=0.7
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2,<3

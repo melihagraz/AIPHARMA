@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+sqlalchemy
+alembic
+psycopg[binary]
+redis
+celery
+httpx
+argon2-cffi>=23,<26
+# Anthropic SDK for the chat agent layer (app.services.agent_service).
+# Hard-imported at module top so backend won't even start without it.
+anthropic>=0.40,<1

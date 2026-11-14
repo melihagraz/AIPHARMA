@@ -1,0 +1,34 @@
+AI Pharma — Docking_App
+========================
+
+This service builds on three open-source components:
+
+1. AutoDock Vina (binary at bin/vina.exe)
+   ----------------------------------------
+   Apache License 2.0 (see LICENSE_VINA).
+   Source: https://github.com/ccsb-scripps/AutoDock-Vina
+   Citations:
+     - Eberhardt, J., Santos-Martins, D., Tillack, A.F., Forli, S. (2021).
+       AutoDock Vina 1.2.0: New Docking Methods, Expanded Force Field,
+       and Python Bindings. J. Chem. Inf. Model.
+     - Trott, O., Olson, A. J. (2010). AutoDock Vina: improving the speed
+       and accuracy of docking with a new scoring function, efficient
+       optimization and multithreading. J. Comp. Chem.
+
+2. Receptor PDBQT files (receptors/*_target.pdbqt and *_conf.txt)
+   --------------------------------------------------------------
+   Apache License 2.0 (see LICENSE_DOCKSTRING).
+   Source: https://github.com/dockstring/dockstring
+   Citation:
+     - García-Ortegón, M. et al. (2022). DOCKSTRING: easy molecular docking
+       yields better benchmarks for ligand design. J. Chem. Inf. Model.
+
+3. Meeko (Python ligand prep, pip dependency)
+   --------------------------------------------
+   LGPL-2.1 (consumed as binary wheel — meeko's source is NOT redistributed
+   here). Used for SMILES → PDBQT conversion at runtime only. No source
+   modifications.
+   Source: https://github.com/forlilab/Meeko
+
+All code under `app/` (FastAPI wrapper, Vina subprocess driver, schemas)
+is original work by AI Pharma and is not part of any of the above projects.

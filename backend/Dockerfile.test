@@ -1,0 +1,55 @@
+# Test image — builds on the same Python 3.12 base as production but
+# adds the dev requirements and the artefacts the tests need.
+#
+# Build context is the project root (NOT backend/) so this Dockerfile
+# can COPY both backend/ and the sibling packages (Reinvent_App,
+# Docking_App) the cross-cutting tests reach into.
+#
+# Build:
+#     docker build -f backend/Dockerfile.test -t ai-pharma-test .
+# Run:
+#     docker run --rm ai-pharma-test
+#
+# Notes on caching: the requirements layers are split so that the
+# expensive torch/rdkit step is cached separately from the app-code
+# layer. Edits to backend/app/ only invalidate the final COPY layer,
+# so iterating on test code stays fast (~5 s rebuild).
+
+FROM python:3.12-slim AS test
+
+# System deps RDKit needs at import time. libxrender + libxext are
+# common cargo-cult adds but RDKit 2024.x actually links them, and
+# libgomp is the OpenMP runtime that the wheel's compiled bits
+# expect to find at load time.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libgomp1 libxrender1 libxext6 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+# --- Layer 1: heavy deps (torch, rdkit) via Reinvent_App requirements ---
+# These rarely change so they cache well. Pin torch CPU explicitly to
+# avoid pulling the 2 GB CUDA build into a CI sandbox.
+COPY Reinvent_App/requirements.txt /tmp/reinvent-req.txt
+RUN pip install --no-cache-dir \
+        --extra-index-url https://download.pytorch.org/whl/cpu \
+        -r /tmp/reinvent-req.txt
+
+# --- Layer 2: backend deps + dev tooling ---
+COPY backend/requirements.txt backend/requirements-dev.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements-dev.txt
+
+# --- Layer 3: source — everything the tests touch ---
+# Order: backend/ last so iterating on test code doesn't bust the heavy
+# layers above. The sibling packages are copied verbatim so the
+# importlib-based tests can resolve their files.
+COPY Reinvent_App/ /workspace/Reinvent_App/
+COPY Docking_App/ /workspace/Docking_App/
+COPY backend/ /workspace/backend/
+
+WORKDIR /workspace/backend
+
+# Default command runs the full suite. CI overrides with extra args
+# (e.g. -m "not slow") via `docker run ... pytest -m "not slow"`.
+ENTRYPOINT ["pytest"]
+CMD ["-v", "--tb=short"]

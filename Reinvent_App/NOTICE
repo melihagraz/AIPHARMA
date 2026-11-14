@@ -1,0 +1,37 @@
+AI Pharma — Reinvent_App
+=========================
+
+This product includes software developed by AstraZeneca AB and contributors
+as part of the REINVENT 4 project (https://github.com/MolecularAI/REINVENT4).
+
+The following files in `reinvent_core/` are adapted from REINVENT 4 under
+the Apache License, Version 2.0 (see LICENSE file in this directory):
+
+    reinvent_core/model.py            (from reinvent/models/reinvent/models/model.py)
+    reinvent_core/rnn.py              (from reinvent/models/reinvent/models/rnn.py)
+    reinvent_core/vocabulary.py       (from reinvent/models/reinvent/models/vocabulary.py)
+    reinvent_core/dataset.py          (from reinvent/models/reinvent/models/dataset.py)
+    reinvent_core/utils.py            (from reinvent/models/reinvent/utils.py)
+    reinvent_core/conversions.py      (from reinvent/chemistry/conversions.py)
+    reinvent_core/meta_data.py        (from reinvent/models/meta_data.py)
+    reinvent_core/model_mode_enum.py  (from reinvent/models/model_mode_enum.py)
+
+The pre-trained checkpoint `prior/reinvent.prior` is not included in
+this source release. Obtain the appropriate model separately from the
+official REINVENT 4 model archive. Verify its provenance, license,
+version compatibility, and SHA-256 checksum before use.
+
+All other code in this directory (in particular `app/` — the FastAPI wrapper,
+sampler, and integration code) is original work by AI Pharma and is not part
+of REINVENT 4.
+
+Original REINVENT 4 copyright notice:
+    Copyright (c) AstraZeneca AB
+    Licensed under the Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Modifications:
+    Adapted files have been minimally edited to remove dependencies on the
+    full REINVENT 4 package (logging facade, runmode plumbing, etc.) and to
+    work as a standalone inference module. Original algorithms, model
+    architecture, and tokenization logic are unchanged.

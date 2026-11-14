@@ -1,0 +1,25 @@
+AI Pharma — Admet_App
+======================
+
+This service uses ADMET-AI (https://github.com/swansonk14/admet_ai) by
+Kyle Swanson et al., licensed under the MIT License (see LICENSE in this
+directory).
+
+ADMET-AI is consumed as a third-party Python dependency via pip — its source
+code is NOT redistributed here. The MIT license requires only that the above
+copyright notice and permission notice be preserved alongside any copy of
+the software. Pip-installed packages satisfy this through their own LICENSE
+files in site-packages.
+
+The underlying ADMET prediction models (Chemprop graph neural networks,
+trained on Therapeutic Data Commons benchmarks) are downloaded by ADMET-AI
+on first use and stored under the Python user cache. They carry their own
+licenses; consult ADMET-AI documentation for details.
+
+All code under `app/` (FastAPI wrapper, predictor, schemas) is original work
+by AI Pharma and is not part of ADMET-AI.
+
+Original ADMET-AI publication:
+    Swanson, K. et al. "ADMET-AI: A machine learning ADMET platform for
+    evaluation of large-scale chemical libraries" Bioinformatics, 2024.
+    https://doi.org/10.1093/bioinformatics/btae416

@@ -1,0 +1,31 @@
+name: Research release checks (offline code tests only)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'aipharma_eave/**'
+      - 'scripts/aipharma_release.py'
+      - 'scripts/phase15_live_replay.py'
+      - 'tests/test_release_packaging.py'
+      - 'tests/test_eave_engine.py'
+      - 'tests/test_phase14_gate.py'
+      - 'tests/test_phase15_live_replay.py'
+      - 'reproducibility/**'
+      - '.github/workflows/research-release-checks.yml'
+permissions:
+  contents: read
+jobs:
+  evidence-unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit and release safety tests (no models, no docking)
+        run: |
+          python -m unittest discover -s tests -p 'test_eave_engine.py' -q
+          python -m unittest discover -s tests -p 'test_phase14_gate.py' -q
+          python -m unittest discover -s tests -p 'test_phase15_live_replay.py' -q
+          python -m unittest discover -s tests -p 'test_release_packaging.py' -q
