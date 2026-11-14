@@ -1,26 +1,19 @@
-# AIPHARMA araştırma yazılımı yayın adayı — kullanıcı adımları
+# AIPHARMA v1.0.0 — GitHub yayın adayı
 
-Bu ZIP, mevcut `~/AIPHARMA` projesine **eklenen** dosyalardan oluşur; proje kodunu veya veri sonuçlarını silmez. Bu paket tek başına tam AIPHARMA kaynak kodu değildir. Projenin kendi WSL kopyasından güvenli, sürümlü bir source candidate üretir.
+**Durum (14 Kasım 2026):** Kaynak kodunun seçilmiş sürümü GitHub\u0027daki **private** `release/v1.0.0-candidate` dalında. Henüz public GitHub Release veya AIPHARMA Zenodo DOI oluşturulmadı.
 
-```bash
-cd ~/AIPHARMA
-source .venv/bin/activate
-unzip -n /mnt/c/Users/cobre/Downloads/aipharma_releasekit_rc1.zip -d ~/AIPHARMA
-python scripts/aipharma_release.py inspect
-python scripts/aipharma_release.py freeze
-python scripts/aipharma_release.py test
-python scripts/aipharma_release.py bundle
-```
+## İçerik ve sınırlamalar
 
-Oluşacak dosyalar:
-- `dist_release/AIPHARMA_0.1.0-rc1_source_candidate.zip`
-- `dist_release/AIPHARMA_0.1.0-rc1_source_candidate.zip.sha256`
-- `dist_release/release_audit.json`
-- `reproducibility/local/environment.json` (yerel, kamuya açık değildir)
-- `reproducibility/local/pip-freeze-pyXY.txt` (kontrol edilmeli)
+- Kaynak kodu ve bilimsel denetim betikleri mevcuttur; indirilen model ağırlıkları, ham benchmark verileri, tam React arayüzü ve kişisel raporlar bu pakette yoktur.
+- `backend`, `Reinvent_App`, `Admet_App`, `Docking_App` ve `Pocket_App` farklı bilimsel servisler ve bağımlılıklar kullanabilir. Temiz main API kurulumu bütün bilimsel modellerin çalıştığını göstermez.
+- Önceki yerel testte 179 test geçti, 3 test deselected kaldı; bu bağımsız tam-yığın doğrulama değildir.
 
-`inspect` çıktısında public repository, LICENSE veya model/data eksiklikleri `publication_blockers` olarak görünmesi beklenir. Bunları otomatik olarak var saymıyoruz. GitHub/Zenodo'ya yükleme yapılmaz.
+## Depoyu inceleme
 
-**Dikkat:** `bundle` kaynak kodu küçük, önceden belirlenmiş uzantı ve klasörlerden toplar, bilimsel veri ve ağırlıkları dışarıda bırakır. Yayınlamadan önce arşivi manuel olarak açıp fikrî mülkiyet ve güvenlik kontrolü yap. Kök lisans için hak sahiplerinden izin al.
+    gh repo clone melihagraz/AIPHARMA
+    cd AIPHARMA
+    git switch release/v1.0.0-candidate
 
-**Eski README uyarısı:** Önceki kök `README.md` Phase 6 ifadeleri içerebilir. `reproducibility/README_RELEASE_DRAFT.md` güncel sonuçları anlatan bir taslaktır. İçeriği gözden geçirip kamuya açmadan önce kök README'ye taşı; otomatik olarak orijinal README'nin üzerine yazmıyoruz.
+Kurulumun daha önce denetlenen kısmı için `SETUP.md`, kapsam ve sınırlamalar için `REPRODUCIBILITY.md`, kaynak hakları için `PUBLICATION_STATUS.md` ve `reproducibility/THIRD_PARTY_INVENTORY_DRAFT.md` belgelerini oku.
+
+**Public yayın için:** Hak sahipliği ve üçüncü taraf lisans denetimi, nihai Git ağacının gizli bilgi/veri taraması, kaynak arşiv SHA-256 ve metadata incelemesini tamamla. Ardından sürüm etiketini ve GitHub Release\u0027i yayımla, gerçek Zenodo DOI\u0027sini `CITATION.cff` içine ekle. Onay verilmeden depo görünürlüğünü değiştirme.

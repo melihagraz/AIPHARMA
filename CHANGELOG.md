@@ -1,5 +1,12 @@
 # AIPHARMA Changelog
 
+## 1.0.0 — UNRELEASED; private source candidate (2026-11-14)
+
+- Prepared curated source on `release/v1.0.0-candidate`; not a public release or DOI.
+- Aligned version and citation metadata; documented scope, limitations, license audit gates and main repository overview.
+- Prior local replay: 179 passed, 3 deselected with manually provisioned scientific environment. Independent full-stack reproduction remains unverified.
+- Scientific weights, private reports, raw benchmark panels and full React frontend sources are not part of this curated source candidate.
+
 ## 0.1.0-rc1 — 2026-11-10 — Local release candidate; NOT published
 
 - Added reproducibility audit, environment capture and source-only release builder.

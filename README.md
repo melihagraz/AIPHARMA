@@ -1,13 +1,53 @@
-# AIPHARMA publication gate overlay
+# AIPHARMA
 
-This is a **read-only preflight**, not a deployer and not an open-source license.
+**A provenance- and evidence-aware research software framework for AI-assisted molecular design and target-specific validation.**
 
-Install into your existing project (only adds new paths `scripts/prepublish_gate.py` and `docs/PUBLICATION_GATE_TR.md`, `docs/MANUSCRIPT_AVAILABILITY_TEMPLATE_EN.md`):
+**Status:** v1.0.0 **private release candidate**. This repository is not yet a public GitHub Release, has no AIPHARMA Zenodo DOI, and is not certified for independent end-to-end scientific reproduction. The version number is the intended release version, **not** evidence that publication has occurred. See [publication status](PUBLICATION_STATUS.md).
 
-```
-unzip -n /mnt/c/Users/cobre/Downloads/AIPHARMA_Publication_Gate_20261111.zip -d ~/AIPHARMA
-cd ~/AIPHARMA
-python scripts/prepublish_gate.py --root .
-```
+## Overview
 
-A returned non-zero exit status means a blocking condition remains. PASS of this helper is not a legal, security, public availability, or independent reproduction certification. No files are pushed or published.
+AIPHARMA brings together target-oriented molecular design, scientific-model integrations, docking-related assessment, and provenance/reproducibility checks. The source includes:
+
+- **Target and molecule workflows:** API orchestration and target-specific validation rather than automatically treating a generated molecule as target-active.
+- **ALK5 design:** RDKit-based design around documented reference molecules, with optional paired ADMET comparison when the separate ADMET service is running.
+- **Scientific engines:** interfaces to REINVENT4 generation, ADMET-AI prediction, AutoDock Vina docking, and pocket/pharmacophore workflows. These require separately configured dependencies and, where applicable, model weights and receptor inputs.
+- **Evidence and audit tooling:** scripts for EGFR/ALK5 benchmarks, candidate provenance, release checks, and replay. Recorded benchmark results are not independent validation of biological activity or clinical safety.
+
+## Repository layout
+
+| Path | Purpose |
+|---|---|
+| `backend/` | FastAPI application, authentication, jobs, target/design routes, and API tests |
+| `Reinvent_App/` | REINVENT-compatible generation service and adapted core modules |
+| `Admet_App/` | ADMET prediction service wrapper |
+| `Docking_App/` | Docking integration and configuration examples |
+| `Pocket_App/` | Pocket detection and pharmacophore-related services |
+| `scripts/` | Research, analysis, validation, and audit utilities |
+| `reproducibility/` | Reproducibility notes, provenance, release checklist, and third-party inventory |
+
+This is a **curated source candidate**. It does not include the full React frontend source/build, raw DUD-E/DrugCLIP panels, downloaded scientific weights, private experiment outputs, or all external receptor/structure inputs. Consequently it is **not** a self-contained turnkey installation of the entire application.
+
+## Setup
+
+Start with [SETUP.md](SETUP.md) and [reproducibility/README.md](reproducibility/README.md). The main API and scientific engines use different environments. For example, from an environment with the backend requirements already installed and application configuration in place:
+
+    python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --app-dir backend
+
+That command starts **only the API**; it does not install scientific engines, fetch model checkpoints, start ADMET, or supply the frontend. See [SETUP.md](SETUP.md) for the separately configured ADMET service and the limits of the previously checked delivery path. Do not use this research setup as an internet-facing production deployment without a security review; production mode deliberately blocks unreviewed legacy API routes.
+
+## Recorded evidence and limits
+
+- A locally provisioned clean-source replay on 2026-11-14 recorded **179 passing tests and 3 deselections**. Scientific packages/assets were manually supplied; this is **not** an independent clean-machine install of every service.
+- EGFR 1M17 redocking in the prior local audit recorded **1.4022 Å RMSD**.
+- In a prior retrospective ALK5 panel of **50 actives and 50 presumed decoys**, the AIPHARMA Vina workflow recorded ROC-AUC **0.817**. A separately adapted DockStream comparison recorded **0.815** on that panel. This small observed difference does **not** establish superiority or statistical equivalence.
+- Predicted docking scores, generated molecules, and ADMET estimates do not establish experimental potency, toxicity, synthesis feasibility, or clinical utility. Reproduction of all benchmark results from scratch requires additional pinned scientific inputs and runtime details.
+
+For what has and has not been checked, see [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md), and the [release checklist](reproducibility/RELEASE_CHECKLIST.md).
+
+## License, data, and citation
+
+The intended license for **original AIPHARMA code whose copyright holders authorized it** is Apache-2.0; see [LICENSE](LICENSE) and [LICENSE_SCOPE.md](LICENSE_SCOPE.md). Third-party components retain their own terms and attribution obligations. This private candidate is **not yet cleared for public redistribution**; see [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md) and the [third-party inventory](reproducibility/THIRD_PARTY_INVENTORY_DRAFT.md).
+
+Raw third-party benchmark datasets and model checkpoints are not redistributed in this candidate. The official external REINVENT prior is identified in the reproducibility notes, but must be obtained under its own terms.
+
+Citation metadata is in [CITATION.cff](CITATION.cff). A DOI and release date will be added **only after** an actual public software archive is published.

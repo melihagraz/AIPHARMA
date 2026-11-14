@@ -1,24 +1,21 @@
-# Public reproducibility release checklist
+# AIPHARMA v1.0.0 public-release checklist
 
-Status: NOT COMPLETE for AIPHARMA v0.1.0-rc1. Use as a checklist, not evidence of completion.
+**Current status: NOT COMPLETE.** This list records evidence; it does not automatically approve redistribution.
 
-- [x] Version file and local candidate packaging script created.
-- [x] Initial citation metadata prepared (author/contributor review pending).
-- [x] Unit-test command, local environment inventory and checksum generation provided.
-- [x] Source-only archive excludes datasets, secrets, model weights, venvs and private reports by default.
-- [x] External data/model/structure provenance documented with known SHA-256 values.
-- [ ] All coauthors and code owners approve the copyright/license choice; root LICENSE file supplied.
-- [ ] Upstream sources and bundled third-party code are audited for license compliance and attribution.
-- [ ] Check exact installed Python scientific dependencies; resolve compatibility/conflicts; retain OS-specific reviewed lock.
-- [ ] Native Vina executable version and SHA-256, receptor/grid files, weights and model versions are captured.
-- [ ] Clean-environment EAVE unit tests and full scientific install tested on separate machine/container.
-- [ ] Full 100-molecule panel reproduced with exact fixed panel and inputs in a clean environment.
-- [ ] Publicly usable data acquisition and redistribution process established; identifiers and data hashes made public.
-- [ ] Source archive manually inspected for accidental secrets/data/copyright violations.
-- [ ] GitHub repo established and accessible, exact commit tagged v0.1.0-rc1 (or later version).
-- [ ] GitHub release artifact SHA-256 matches verified local candidate.
-- [ ] DOI from Zenodo/software archive recorded and linked from CITATION.cff.
-- [ ] Manuscript availability statement updated with actual links, commit, data accessions and DOI.
+- [x] Curated source candidate committed to a **private** GitHub branch.
+- [x] Intended version, citation metadata, main README and release status documented.
+- [x] Apache-2.0 root license present with an explicit scope statement for authorized original code.
+- [x] Earlier scoped source/history secret checks found zero Gitleaks findings; not a blanket clearance.
+- [x] Previously recorded provisioned replay: 179 tests passed, 3 deselected.
+- [x] Downloaded REINVENT prior and raw DUD-E/DrugCLIP panel data are excluded from the selected source candidate.
+- [ ] Document actual approval of all relevant first-party copyright owners and check applicable agreements.
+- [ ] Finish copied/adapted code and receptor/asset per-file origin, revision, license, and NOTICE checks.
+- [ ] Audit the **final** exact Git tree/release archive for secrets, dataset/model rights, and binary redistribution.
+- [ ] Reconcile exact runtime dependency versions and a portable install procedure; identify the frontend distribution plan.
+- [ ] Complete an independent full-stack scientific install and complete-panel re-run if such reproducibility will be claimed.
+- [ ] Verify citation authors/contributors and all scientific claims for the public release.
+- [ ] Create a reviewed source archive with recorded SHA-256 matching the intended public tag.
+- [ ] Publish an authorized GitHub release only after the gates above; then archive in Zenodo and record the actual DOI and release date.
+- [ ] Update the manuscript and citation metadata with the final DOI, tag, commit, and available data accessions.
 
-**A locally packaged source candidate is not a public or independently reproduced release.**
-- [ ] Root README is updated from Phase 6-era notes to reflect Phase 15 evidence and remaining limitations.
+For the authoritative release state see [../PUBLICATION_STATUS.md](../PUBLICATION_STATUS.md).
