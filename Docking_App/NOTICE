@@ -1,34 +1,39 @@
 AI Pharma — Docking_App
-========================
+=======================
 
-This service builds on three open-source components:
+This curated source candidate includes original AIPHARMA docking service wrappers,
+configuration examples and the third-party license/notice texts listed below.
 
-1. AutoDock Vina (binary at bin/vina.exe)
-   ----------------------------------------
-   Apache License 2.0 (see LICENSE_VINA).
-   Source: https://github.com/ccsb-scripps/AutoDock-Vina
-   Citations:
-     - Eberhardt, J., Santos-Martins, D., Tillack, A.F., Forli, S. (2021).
-       AutoDock Vina 1.2.0: New Docking Methods, Expanded Force Field,
-       and Python Bindings. J. Chem. Inf. Model.
-     - Trott, O., Olson, A. J. (2010). AutoDock Vina: improving the speed
-       and accuracy of docking with a new scoring function, efficient
-       optimization and multithreading. J. Comp. Chem.
+1. AutoDock Vina
+   Source: https://github.com/forlilab/AutoDock-Vina
+   License: Apache License, Version 2.0 (see LICENSE_VINA).
+   Vina is an external native scientific engine. The curated Git release
+   candidate does NOT bundle a `bin/vina.exe` executable. Record the exact
+   separately installed Vina binary version and checksum in reproducibility
+   evidence before claiming an independent replay.
 
-2. Receptor PDBQT files (receptors/*_target.pdbqt and *_conf.txt)
-   --------------------------------------------------------------
-   Apache License 2.0 (see LICENSE_DOCKSTRING).
-   Source: https://github.com/dockstring/dockstring
-   Citation:
-     - García-Ortegón, M. et al. (2022). DOCKSTRING: easy molecular docking
-       yields better benchmarks for ligand design. J. Chem. Inf. Model.
+2. DOCKSTRING-related receptor configuration provenance
+   Source project: https://github.com/dockstring/dockstring
+   Reported upstream license: Apache License, Version 2.0 (see LICENSE_DOCKSTRING).
+   The selected tree contains `receptors/*_conf.txt` grid configuration files,
+   but does NOT contain `receptors/*_target.pdbqt` receptor structures.
+   The exact provenance and applicability of the upstream license to each
+   configuration file remain to be audited; no blanket receptor-data rights
+   or redistribution approval is asserted.
 
-3. Meeko (Python ligand prep, pip dependency)
-   --------------------------------------------
-   LGPL-2.1 (consumed as binary wheel — meeko's source is NOT redistributed
-   here). Used for SMILES → PDBQT conversion at runtime only. No source
-   modifications.
+3. Meeko
    Source: https://github.com/forlilab/Meeko
+   License: LGPL-2.1 (verify the exact installed release).
+   Used as a separately installed Python ligand-preparation dependency.
+   No Meeko source or wheel is included in this source candidate.
 
-All code under `app/` (FastAPI wrapper, Vina subprocess driver, schemas)
-is original work by AI Pharma and is not part of any of the above projects.
+DockStream was used in a separate local comparator experiment. Its modified
+compatibility fork is not included in this selected Git tree.
+
+Files under `app/` are represented by the project team as original AIPHARMA
+integration code; this is subject to the first-party authorization statement
+in the root LICENSE_SCOPE.md.
+
+Earlier notices referring to bundled Vina executables and receptor PDBQT
+files described local development assets, NOT the actual curated release
+candidate. See reproducibility/THIRD_PARTY_LICENSE_CHECK_20261114.md.

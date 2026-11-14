@@ -19,8 +19,9 @@ collaboration, funding, or intellectual-property agreement.
   reviewed separately.
 - `Docking_App/`: preserve relevant AutoDock Vina and Dockstring licenses and
   notices; check binaries, receptor files and any adapted code individually.
-- `Pocket_App/`: check origin and redistribution terms of receptor structures
-  and other assets identified in its NOTICE.
+- `Pocket_App/`: check source-file provenance and redistribution terms for any
+  embedded third-party code or receptor/structure assets. The curated candidate
+  does not contain a `Pocket_App/NOTICE` file.
 - All other third-party code, trained weights, datasets and assets retain their
   original rights and terms. A public download link does not prove that those
   materials may be redistributed.
