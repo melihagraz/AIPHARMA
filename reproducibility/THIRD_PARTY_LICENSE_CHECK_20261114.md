@@ -21,6 +21,12 @@
 - The previous `Docking_App/NOTICE` referred to `bin/vina.exe` and bundled `*_target.pdbqt` receptor files. **Neither class of file was found in the private candidate Git tree**; the notice was corrected in the same documentation change.
 - `Pocket_App/` contains application source, but no `Pocket_App/NOTICE` file was found in the candidate. The scope statement no longer points to a non-existent notice. Any third-party embedded code or structure requires per-file review.
 
+## REINVENT4 license position (separate from scientific equivalence)
+
+- The REINVENT4 upstream `LICENSE` at the pinned comparison revision `0f075b349ed22015e0406350c6f426701bb0815d` is **Apache-2.0**. It permits derivative redistribution and commercial use subject to license delivery, retained attribution/copyright notices and prominent notices of changes.
+- The pinned upstream root directory has no standalone `NOTICE` file; the AIPHARMA package nevertheless includes an adapted-code NOTICE and an Apache-2.0 license copy. Each of eight adapted module headers records source/attribution and modification intent.
+- This is positive evidence that basic notice requirements are **addressed**, not a certification of perfect provenance or every copyright contributor. The origin revision remains unknown and six current-source diffs are recorded. A pin/diff is a reproducibility issue, not an automatic prohibition under Apache-2.0.
+
 ## Conditions still open before public distribution
 
 1. For eight REINVENT files, identify the exact upstream commit/version and produce a per-file original/adapted mapping with attribution and meaningful modification details.

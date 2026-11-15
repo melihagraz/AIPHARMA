@@ -30,6 +30,14 @@ The directories named above are **not automatically excluded from public
 release**; they require a component-level license review first. This file
 does not replace or change any upstream license.
 
+**ALK5 data exception:** `backend/app/data/alk5_design_references.json` is a
+curated data asset declared as derived from ChEMBL records. It is **not**
+covered by the first-party Apache-2.0 software license. ChEMBL-derived
+adaptations are subject to CC BY-SA 3.0 attribution/share-alike provisions;
+any unverified additional source materials must be separately cleared. See
+`backend/app/data/ALK5_REFERENCE_ATTRIBUTION.md` and
+`reproducibility/RELEASE_RIGHTS_DECISION_20261114.md`.
+
 ## Before public release
 
 1. Confirm rights to the original code, including any employment, sponsored
