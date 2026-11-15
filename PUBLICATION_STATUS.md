@@ -15,7 +15,8 @@ The GitHub branch `release/v1.0.0-candidate` holds curated source code. No v1.0.
 ## Blocking reviews before public release
 
 - **First-party authorization:** record approvals from every relevant code copyright holder and check any applicable contributor, employer, institutional, or sponsored-research agreement. A repository license file alone cannot establish those rights.
-- **Third-party code and assets:** reconcile every distributed copied/adapted file against upstream origin, revision, license, copyright and NOTICE requirements; audit the selected `Reinvent_App`, `Admet_App`, `Docking_App`, and `Pocket_App` files. See the draft third-party inventory.
+- **Third-party code and assets:** reconcile every distributed copied/adapted file against upstream origin, revision, license, copyright and NOTICE requirements; audit the selected `Reinvent_App`, `Admet_App`, `Docking_App`, and `Pocket_App` files.
+- **REINVENT baseline drift:** a pinned eight-file upstream comparison found six adapted modules with differences beyond attribution headers; source revision and compatibility implications must be resolved or clearly documented. See `reproducibility/REINVENT_UPSTREAM_DIFF_20261114.md`. See the draft third-party inventory.
 - **Full candidate review:** scan the actual final Git tree and publishable artifacts for credentials, private data, unlicensed checkpoints, restricted structures, bundled binaries, and licensing conflicts. The existing scans have a defined scope and predate some documentation changes.
 - **Documentation and packaging:** finish contributor credit, independent setup limitations, exact scientific dependencies/input acquisition, and release artifact checksum.
 - **Publication:** only after the preceding gates are approved, create a public repository/tag/release and deposit a matching archive; then fill in the real DOI and publication date.

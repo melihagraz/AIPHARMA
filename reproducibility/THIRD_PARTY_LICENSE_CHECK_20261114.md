@@ -16,7 +16,7 @@
 
 ## Findings in the repository's own notices
 
-- `Reinvent_App/NOTICE` provides upstream attribution and a list of eight adapted modules. Header inspection verified that each corresponding file contains an attribution/change note. This inspection did not establish exact upstream commit equivalence or a complete textual diff.
+- `Reinvent_App/NOTICE` provides upstream attribution and a list of eight adapted modules. Header inspection verified that each corresponding file contains an attribution/change note. This was followed by a separate line-by-line comparison against a pinned upstream reference; see `REINVENT_UPSTREAM_DIFF_20261114.md`. The historical source revision used to make the adaptations remains unidentified.
 - `Admet_App/NOTICE` identifies ADMET-AI as a separately installed MIT dependency; the service wrapper is in the candidate.
 - The previous `Docking_App/NOTICE` referred to `bin/vina.exe` and bundled `*_target.pdbqt` receptor files. **Neither class of file was found in the private candidate Git tree**; the notice was corrected in the same documentation change.
 - `Pocket_App/` contains application source, but no `Pocket_App/NOTICE` file was found in the candidate. The scope statement no longer points to a non-existent notice. Any third-party embedded code or structure requires per-file review.

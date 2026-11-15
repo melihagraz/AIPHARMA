@@ -30,8 +30,15 @@ Original REINVENT 4 copyright notice:
     Licensed under the Apache License, Version 2.0
     http://www.apache.org/licenses/LICENSE-2.0
 
-Modifications:
-    Adapted files have been minimally edited to remove dependencies on the
-    full REINVENT 4 package (logging facade, runmode plumbing, etc.) and to
-    work as a standalone inference module. Original algorithms, model
-    architecture, and tokenization logic are unchanged.
+Modifications and scope:
+    Adapted modules are repackaged for a standalone AIPHARMA inference service.
+    In addition to changed import paths, a comparison against REINVENT4
+    upstream commit 0f075b349ed22015e0406350c6f426701bb0815d found
+    changes involving SMILES randomization/isomeric handling, RNN device
+    placement, tensor allocation, model tokenizer wiring, and removal of
+    metadata utility methods. These are not just cosmetic import changes.
+    vocabulary.py and model_mode_enum.py matched that pinned upstream
+    version after excluding local attribution headers; six others differed.
+    Exact original upstream revision used for adaptation has not been
+    proven. Functional equivalence to a current upstream release is NOT
+    claimed. See reproducibility/REINVENT_UPSTREAM_DIFF_20261114.md.
