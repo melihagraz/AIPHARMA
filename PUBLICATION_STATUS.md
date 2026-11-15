@@ -6,7 +6,7 @@ The GitHub branch `release/v1.0.0-candidate` holds curated source code. No v1.0.
 
 ## Completed or documented
 
-- The project team states that it owns the original AIPHARMA code and has selected Apache-2.0 as the intended license for those original materials. The first-party license text and scope statement are present.
+- The developer states **AIPHARMA was developed independently of Brown duties/resources** (declaration recorded 2026-11-14); team states it owns original AIPHARMA code and has selected Apache-2.0. Root license and scope documents are present. This is not an independent legal ownership finding.
 - A curated source candidate was packaged without locally downloaded model checkpoints, raw DUD-E/DrugCLIP benchmark files, local environments, or private reports.
 - Prior Gitleaks checks on the selected candidate package and source-history scopes reported zero findings. A zero-finding scan is not a guarantee against all sensitive material.
 - The earlier locally provisioned replay recorded 179 tests passed and 3 deselected. This is not an independent, full-stack reproduction.
@@ -14,8 +14,8 @@ The GitHub branch `release/v1.0.0-candidate` holds curated source code. No v1.0.
 
 ## Blocking reviews before public release
 
-- **First-party authorization:** record approvals from every relevant code copyright holder and check any applicable contributor, employer, institutional, or sponsored-research agreement. A repository license file alone cannot establish those rights.
-  - In particular, [Brown University's Copyright Ownership and Use Policy](https://policy.brown.edu/policy/copyright-ownership-and-use-policy), section 3.1.5, requires Brown software created in the course of University duties or with University funds to be disclosed to **Brown Technology Innovations (BTI)**, and requires BTI coordination for distribution other than specified academic/research distribution of University-owned software. This policy does **not** by itself prove that Brown owns AIPHARMA; the actual project circumstances must be reviewed. Record the BTI determination or other sufficient ownership evidence before public release.
+- **First-party authorization:** Independent-development declaration recorded. Confirm all actual code copyright holders/contributors and any relevant employment, grant, commissioned-work, institutional or third-party assignment obligations; record rights to license original contributions under Apache-2.0.
+  - **Brown is not presumed to own this independent project.** [Brown's copyright policy](https://policy.brown.edu/policy/copyright-ownership-and-use-policy) addresses software created during duties or with University resources/funds, and contains disclosure provisions. If facts/agreements or commercial potential trigger institutional review, seek a BTI determination; do not characterize BTI approval as already obtained or automatically required solely because the developer is affiliated with Brown.
 - **Third-party code and assets:** reconcile every distributed copied/adapted file against upstream origin, revision, license, copyright and NOTICE requirements; audit the selected `Reinvent_App`, `Admet_App`, `Docking_App`, and `Pocket_App` files.
 - **REINVENT baseline drift:** a pinned eight-file upstream comparison found six adapted modules with differences beyond attribution headers; source revision and compatibility implications must be resolved or clearly documented. See `reproducibility/REINVENT_UPSTREAM_DIFF_20261114.md`. See the draft third-party inventory.
 - **Full candidate review:** scan the actual final Git tree and publishable artifacts for credentials, private data, unlicensed checkpoints, restricted structures, bundled binaries, and licensing conflicts. The existing scans have a defined scope and predate some documentation changes.
