@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use AIPHARMA, cite the exact released software version. A Zenodo DOI will be added after publication."
+message: "If you use AIPHARMA, cite the exact software version; a Zenodo DOI will be provided after the archive exists."
 title: "AIPHARMA: A Provenance- and Evidence-Aware Framework for Reproducible AI-Assisted Molecular Design and Target-Specific Validation"
 version: "1.0.0"
 repository-code: "https://github.com/melihagraz/AIPHARMA"

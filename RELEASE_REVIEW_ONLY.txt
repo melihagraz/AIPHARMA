@@ -1,4 +1,8 @@
-AIPHARMA v1.0.0 PRIVATE RELEASE CANDIDATE — NOT APPROVED FOR PUBLIC REDISTRIBUTION
-Publication gate and open items: PUBLICATION_STATUS.md
-Third-party audit details: reproducibility/THIRD_PARTY_INVENTORY_DRAFT.md
-This marker must not be deleted or treated as approval until the publication gate is satisfied.
+AIPHARMA v1.0.0 SOURCE RELEASE — OWNER-CONTROLLED PUBLICATION PREPARATION
+Owner stated on 2026-11-14 that publication permission was granted.
+This statement is not an independent legal determination or substitute for a signature.
+Known limitations and incomplete upstream ChEMBL release provenance are recorded in:
+  PUBLICATION_STATUS.md
+  reproducibility/RELEASE_RIGHTS_DECISION_20261114.md
+  backend/app/data/ALK5_REFERENCE_ATTRIBUTION.md
+At this snapshot: GitHub release/publication and Zenodo DOI are not yet confirmed.

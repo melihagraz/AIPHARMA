@@ -2,7 +2,7 @@
 
 **A provenance- and evidence-aware research software framework for AI-assisted molecular design and target-specific validation.**
 
-**Status:** v1.0.0 **private release candidate**. This repository is not yet a public GitHub Release, has no AIPHARMA Zenodo DOI, and is not certified for independent end-to-end scientific reproduction. The version number is the intended release version, **not** evidence that publication has occurred. See [publication status](PUBLICATION_STATUS.md).
+**Status:** v1.0.0 source release **prepared for owner-controlled public publication**. Until GitHub visibility, tag/release, and Zenodo archive are actually published, this remains a private repository without an AIPHARMA DOI. Full independent end-to-end reproduction is not certified. See [publication status](PUBLICATION_STATUS.md).
 
 ## Overview
 
@@ -46,7 +46,7 @@ For what has and has not been checked, see [REPRODUCIBILITY.md](REPRODUCIBILITY.
 
 ## License, data, and citation
 
-The intended license for **original AIPHARMA code whose copyright holders authorized it** is Apache-2.0; see [LICENSE](LICENSE) and [LICENSE_SCOPE.md](LICENSE_SCOPE.md). Third-party components retain their own terms and attribution obligations. This private candidate is **not yet cleared for public redistribution**; see [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md) and the [third-party inventory](reproducibility/THIRD_PARTY_INVENTORY_DRAFT.md).
+The intended license for **original AIPHARMA code whose copyright holders authorized it** is Apache-2.0; see [LICENSE](LICENSE) and [LICENSE_SCOPE.md](LICENSE_SCOPE.md). Third-party components retain their own terms and attribution obligations. The project developer has stated that contributor publication permission was obtained. This is an owner attestation, not independent verification of legal title. **ChEMBL-derived ALK5 data** remains subject to applicable CC BY-SA 3.0 terms and provenance disclosures, separately from Apache-2.0 original code. See [PUBLICATION_STATUS.md](PUBLICATION_STATUS.md), [ALK5 data attribution](backend/app/data/ALK5_REFERENCE_ATTRIBUTION.md) and the [third-party inventory](reproducibility/THIRD_PARTY_INVENTORY_DRAFT.md).
 
 Raw third-party benchmark datasets and model checkpoints are not redistributed in this candidate. The official external REINVENT prior is identified in the reproducibility notes, but must be obtained under its own terms.
 

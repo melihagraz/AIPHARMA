@@ -2,7 +2,7 @@
 
 **Artifact:** `backend/app/data/alk5_design_references.json`
 **SHA-256:** `6378cbe612416fef4872db936f22c3f44ecf255fcc14827d8707deb6c7b8d24b`
-**Status:** Private release candidate; exact full source chain still unverified.
+**Status:** Source release prepared; exact full source chain still unverified.
 
 ## Content
 
@@ -30,4 +30,4 @@ To the extent that this JSON is an adaptation of ChEMBL-provided database materi
 
 The ChEMBL FAQ warns that some calculated compound properties can originate from commercially licensed software. Whether any such protected feature is actually included here has **not** been established. The availability of ChEMBL IDs, SMILES and activity citations does not itself prove the origin or redistribution rights of every possible upstream input.
 
-**Public-distribution decision:** PENDING confirmation that the entire JSON derives from licensed ChEMBL material and independently authored transformations without restricted extra inputs, plus documentation of the exact source release when recoverable. The candidate remains private pending that review.
+**Release disclosure:** This curated JSON is included in the prepared v1.0.0 source release, with its ChEMBL source attribution and CC BY-SA 3.0 terms separately disclosed. The exact source release, absent intermediate file and complete transformation chain remain **unverified and unreproducible from this source package**. Inclusion does not independently establish rights to any additional upstream inputs beyond the ChEMBL-licensed source; the publisher is responsible for ensuring no separately restricted material is redistributed.

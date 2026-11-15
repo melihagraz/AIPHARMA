@@ -1,38 +1,36 @@
-# AIPHARMA v1.0.0 — rights and distribution decision ledger
+# AIPHARMA v1.0.0 — publication permissions and rights record
 
-**Reviewed:** 2026-11-14. **Updated with developer declaration:** 2026-11-14. **Scope:** private candidate branch `release/v1.0.0-candidate`. Source status is assessed per tracked component, not from repository ownership alone.
+**As of:** 2026-11-14. **Publication decision:** the owner requested public release and stated that the necessary contributor permissions had been granted. This is a **developer/owner attestation**, not independent proof of ownership, an institutional clearance certificate, or a signed license transfer.
 
-**Decision:** NOT YET AUTHORIZED FOR PUBLIC DISTRIBUTION. A software license text or a successful security test cannot substitute for evidence of ownership/authorization.
+## Original AIPHARMA contributions
 
-| Scope | Confirmed from sources | Release status / additional action |
-|---|---|---|
-| Original AIPHARMA source | Developer states AIPHARMA was created **independently of Brown duties/resources**. Team previously stated it owns its original code and selected Apache-2.0. Root LICENSE and LICENSE_SCOPE are present. | **Developer declaration recorded, no Brown ownership presumed.** Confirm the actual copyright holders/contributors, any assignments/sponsor agreements, and authority to license all original contributions. This is not a signed declaration or an institutional determination. |
-| REINVENT4 adapted eight modules | Official upstream license is Apache-2.0; eight local headers include source and change notices; local LICENSE/NOTICE exist; no root upstream NOTICE file at pinned reference revision. | **Basic license permission confirmed, remaining attribution/provenance review**: check exact source history/contributor notices and match final release tree; no algorithmic equivalence claim. |
-| ChEMBL-derived ALK5 JSON | ChEMBL officially publishes source data under CC BY-SA 3.0 (commercial use included with conditions). JSON has 144 records and 2,514 exclusion identities, and identifies ChEMBL/document/activity sources. | **HOLD for entire dataset**: original intermediate and ChEMBL release/raw transformation chain unverified. Keep CC BY-SA attribution and adapted-data share-alike distinct from Apache-2.0 code. Check whether other restricted inputs or commercial calculated properties were included. |
-| Other software/dependencies | Existing inventory covers ADMET-AI, Vina, Meeko, DOCKSTRING, DockStream; relevant licensing has been identified. | Check any source actually redistributed, attribution, structure/data rights, and exact final tree before asserting clearance. |
+- Developer declaration: AIPHARMA was developed independently of Brown University duties/resources.
+- Developer declaration: permission to publicly distribute the original/other contributor AIPHARMA code was granted.
+- Chosen license for original AIPHARMA code where copyright holders have authority: **Apache License 2.0**, with its patent and attribution provisions.
+- Actual contributor-by-contributor written approval, employment agreements and institutional assignment status were not independently inspected. The publishing owner remains responsible for verifying this assertion. Brown ownership or approval is **not** presumed solely from affiliation.
 
-## Brown University institutional disclosure check
+## REINVENT4
 
-The [Brown University Copyright Ownership and Use Policy](https://policy.brown.edu/policy/copyright-ownership-and-use-policy) applies to relevant members of the Brown community, including academic appointees and certain affiliated-hospital faculty. Section 3.1.5 addresses computer software created in the course of University duties or using University funds, requires disclosure to [Brown Technology Innovations (BTI)](mailto:tech-innovations@brown.edu), and directs distribution of University-owned software to be coordinated with BTI except for the specified limited academic/research pathway.
+Upstream REINVENT4 is distributed under **Apache-2.0**, which permits redistribution and modifications subject to proper license delivery, retained notices and documentation of changes. AIPHARMA includes attribution and an adapted-code notice and records the pinned current-upstream eight-file comparison in `reproducibility/REINVENT_UPSTREAM_DIFF_20261114.md`. Six of those files differ substantively from the pinned upstream version; the exact original fork revision is unknown. There is **no assertion of strict upstream equivalence**.
 
-**Developer declaration (2026-11-14):** AIPHARMA was developed as an **independent project**, outside the developer's Brown duties and without Brown project resources, as understood from the direct answer to that question. This is a recorded, user-provided statement, not independent documentary proof, a signed copyright assignment, or a Brown BTI determination. No Brown ownership is assumed solely from the developer's affiliation.
+## ALK5 / ChEMBL data
 
-**Conditional institutional check:** The Brown policy's relevant tests are duties, University funds, substantial resources, sponsored agreements and any other binding assignment; independent development does not by itself establish any of these. The policy uses broad software-disclosure language in section 3.1.5. Brown's research-data licensing guidance separately advises contacting BTI before public sharing if a research product has commercial potential. If the developer's appointment terms, resources, agreements, actual project activity, or commercialization plans make the policy relevant, seek a written scope determination from BTI. A universal mandatory Brown ownership approval is **not presumed** from affiliation alone. Keep confidential correspondence outside this public-intended repository.
+The ALK5 JSON references 144 ChEMBL-identified molecules and an exclusion set of 2,514 normalized parent identities. The source database is **CC BY-SA 3.0**, with license/attribution disclosed at `backend/app/data/ALK5_REFERENCE_ATTRIBUTION.md`. The derived data must not be presented as Apache-2.0-licensed code. The source `alk5_structure_mapping_20261018/completed_panel_nodes.json`, exact ChEMBL release and full input/transformation pipeline have not been recovered.
 
-## What would close the pending gates
+**Decision on reproducibility:** release can transparently describe an unverified historical data derivation rather than claim full reconstruction. **Decision on third-party rights:** the owner's stated permission cannot confer rights to unknown, separately restricted inputs. The publisher is responsible for ensuring no such material is included; this is not independently certified here.
 
-1. Record the **first-party rights evidence** identifying actual AIPHARMA authors/copyright holders, their contributions, the project's declared independent origin, any relevant contract/sponsor restrictions, and their permission to publish under Apache-2.0. Seek a BTI applicability decision only if the actual policy triggers or commercial-release guidance make it relevant; keep any correspondence outside the public repo.
-2. A **data-source declaration** identifying ChEMBL source release and enough evidence to show the ALK5 JSON contains no independently restricted third-party input; retain CC BY-SA attribution and modifications notice.
-3. Final-file-by-file check of **the exact public candidate commit** for notices, sensitive material and dataset/model/binary rights, followed by source-archive checksum.
-4. Only after signoffs, update this decision ledger to record the specific approval evidence identifiers (avoid personal/confidential details), merge/tag/release and then record the actual Zenodo DOI.
+## Other dependencies and distribution
 
-## Authority and limitations
+The code/inventory reference Vina, Meeko, ADMET-AI, DockStream, DOCKSTRING and associated upstream distributions. Verify redistributed vendor/adapted files against their exact license text and notices; external optional dependencies and models are not automatically covered by Apache-2.0.
 
-Upstream license and documentation sources:
+## Publication record
+
+No public GitHub Release, DOI or final independent full-system certification existed at preparation time. Once the owner makes this repo public, links Zenodo first and creates `v1.0.0`, update `CITATION.cff` with the actual DOI.
+
+References:
 - https://github.com/MolecularAI/REINVENT4/blob/main/LICENSE
 - https://www.ebi.ac.uk/chembl/
-- https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/general-questions
 - https://creativecommons.org/licenses/by-sa/3.0/
 - https://policy.brown.edu/policy/copyright-ownership-and-use-policy
 
-This is an evidence-led publication checklist and interpretation of publicly posted terms, **not a signed rightsholder release or legal determination**.
+This report is an evidence inventory and explicit record of user attestation; it is not legal advice.
