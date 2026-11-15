@@ -1,8 +1,10 @@
 # AIPHARMA
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24236794.svg)](https://doi.org/10.5281/zenodo.24236794)
+
 **A provenance- and evidence-aware research software framework for AI-assisted molecular design and target-specific validation.**
 
-**Status:** v1.0.0 source release **prepared for owner-controlled public publication**. Until GitHub visibility, tag/release, and Zenodo archive are actually published, this remains a private repository without an AIPHARMA DOI. Full independent end-to-end reproduction is not certified. See [publication status](PUBLICATION_STATUS.md).
+**Status:** v1.0.0 publicly released on GitHub and archived via Zenodo (DOI supplied by the publisher). Full independent end-to-end reproduction is not certified. See [publication status](PUBLICATION_STATUS.md).
 
 ## Overview
 
@@ -50,4 +52,4 @@ The intended license for **original AIPHARMA code whose copyright holders author
 
 Raw third-party benchmark datasets and model checkpoints are not redistributed in this candidate. The official external REINVENT prior is identified in the reproducibility notes, but must be obtained under its own terms.
 
-Citation metadata is in [CITATION.cff](CITATION.cff). A DOI and release date will be added **only after** an actual public software archive is published.
+**AIPHARMA v1.0.0 Zenodo DOI:** [10.5281/zenodo.24236794](https://doi.org/10.5281/zenodo.24236794). Cite the version-specific [GitHub Release](https://github.com/melihagraz/AIPHARMA/releases/tag/v1.0.0) and the archived software DOI. Machine-readable citation metadata is in [CITATION.cff](CITATION.cff). The v1.0.0 archive is immutable; the DOI was added to the default branch after that archived release.

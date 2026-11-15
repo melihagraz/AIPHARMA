@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "If you use AIPHARMA, cite the exact software version; a Zenodo DOI will be provided after the archive exists."
+message: "If you use AIPHARMA, please cite the archived v1.0.0 software release using its Zenodo DOI."
 title: "AIPHARMA: A Provenance- and Evidence-Aware Framework for Reproducible AI-Assisted Molecular Design and Target-Specific Validation"
 version: "1.0.0"
+doi: "10.5281/zenodo.24236794"
+date-released: 2026-11-15
 repository-code: "https://github.com/melihagraz/AIPHARMA"
 authors:
   - family-names: "Agraz"
     given-names: "Melih"
-# Pre-release metadata: confirm all eligible contributors before public publication.
-# Add the actual Zenodo DOI and date-released only after they exist.
+# Citation DOI supplied by the publisher after the public release; contributor list may be expanded in future versions.

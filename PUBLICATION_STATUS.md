@@ -1,6 +1,6 @@
 # AIPHARMA v1.0.0 — publication status
 
-**As of 2026-11-14: SOURCE RELEASE PREPARED, NOT YET PUBLISHED.** GitHub Release and Zenodo DOI must not be claimed until actually created.
+**Publication:** GitHub [v1.0.0 Release](https://github.com/melihagraz/AIPHARMA/releases/tag/v1.0.0) was published on **2026-11-15 (UTC)**, targeting commit `0d8cbe6d0bafc992cf5c12d142d18d0812a966a7`. The publisher reports Zenodo DOI [10.5281/zenodo.24236794](https://doi.org/10.5281/zenodo.24236794). The DOI was provided by the publisher; its record metadata could not be independently retrieved in this documentation update.
 
 ## Owner authorization declaration
 
@@ -19,12 +19,9 @@ The curated source includes API and scientific integration code and a ChEMBL-der
 - Previously reported local testing: 179 passed and 3 deselected with provisioned dependencies; ALK5 count=1 targeted design smoke test passed. This is not an independent clean-machine end-to-end replay. Scientific molecular predictions are not experimentally validated.
 - Prior Gitleaks scan of the candidate reported no findings; a zero-finding scan does not prove the absence of all secret or restricted content.
 
-## Publication action order
+## Publication provenance
 
-1. Check exact final tree/history for secrets, restricted files, license notices and the current owner declaration.
-2. Make GitHub repository public with the repository owner's account.
-3. **Before creating GitHub Release**, enable the public repository in Zenodo's GitHub integration.
-4. Tag and publish GitHub Release `v1.0.0` from the reviewed commit.
-5. Confirm Zenodo archived the release and issued a DOI, then update `CITATION.cff` with the actual identifier in a subsequent commit.
-
-This publication status document records consent and limitations; it does **not** fabricate a DOI or guarantee complete legal/scientific verification.
+- Public GitHub release: [v1.0.0](https://github.com/melihagraz/AIPHARMA/releases/tag/v1.0.0); target commit `0d8cbe6d0bafc992cf5c12d142d18d0812a966a7`.
+- Zenodo DOI **as supplied by the publisher**: [10.5281/zenodo.24236794](https://doi.org/10.5281/zenodo.24236794). Whether it is the version-specific DOI versus a concept DOI should be checked against the Zenodo record metadata; the same DOI is used consistently in the current `main` citation metadata.
+- The initial v1.0.0 GitHub tag and Zenodo archive were **not modified** when the DOI badge and citation files were added to `main` after publication. This preserves the archived version's source snapshot.
+- This record documents the owner's release and retained limitations; it is not a legal certification or independent complete-reproduction guarantee.

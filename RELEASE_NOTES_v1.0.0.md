@@ -28,4 +28,4 @@ A provenance- and evidence-aware research software framework for AI-assisted mol
 - Adapted REINVENT and other third-party components retain their original license/copyright notice obligations.
 - Developer reports having the contributor permissions for public release. Refer to PUBLICATION_STATUS.md for the scope and limitations of that assertion.
 
-Zenodo DOI: **not yet issued** at the time these notes were prepared. Link the repository in Zenodo **before** publishing this GitHub release, then record the actual DOI after deposit.
+**Zenodo DOI (v1.0.0):** [10.5281/zenodo.24236794](https://doi.org/10.5281/zenodo.24236794). The published GitHub release is [v1.0.0](https://github.com/melihagraz/AIPHARMA/releases/tag/v1.0.0). DOI metadata was supplied after publication; this link was added to the release notes without moving the version tag.
